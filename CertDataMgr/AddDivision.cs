@@ -26,6 +26,7 @@ namespace CertDataMgr
             else
             {
                 CertSQL.SQLCon a = new SQLCon();
+                a.DBConfig.Open();
 
                 // EXEC _AddDivision @DivisionName, @DBConfig
                 a.SQLCMD = new SqlCommand("_AddDivision", a.DBConfig);
